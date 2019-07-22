@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import BreweryCard from '../components/brewerycard'
 
 
 class Breweries extends Component{
@@ -23,6 +24,12 @@ class Breweries extends Component{
     return(
       <div>
         <h1>Breweries</h1>
+        {this.state.breweries.map(brewery=>
+          <BreweryCard
+            brewery={brewery}
+          />
+          )
+        }
       </div>
     )
   }
