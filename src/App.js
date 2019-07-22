@@ -1,10 +1,10 @@
 import React from 'react';
-import Beweries from './containers/Beweries';
+import Breweries from './containers/Breweries';
 
 function App() {
   return (
 
-      <Beweries/>
+      <Breweries/>
 
   );
 }
