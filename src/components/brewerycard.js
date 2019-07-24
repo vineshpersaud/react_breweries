@@ -1,6 +1,7 @@
 import React from 'react';
 import './brewerycard.css'
 
+
 const BreweryCard = ({brewery}) => (
   <div class="BreweryCard" >
     <h3>{brewery.name}</h3>

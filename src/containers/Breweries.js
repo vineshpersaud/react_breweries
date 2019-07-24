@@ -1,6 +1,6 @@
-import React, {Component} from 'react'
-import BreweryCard from '../components/brewerycard'
-
+import React, {Component} from 'react';
+import BreweryCard from '../components/brewerycard';
+import Map from '../components/map';
 
 class Breweries extends Component{
   constructor(){
@@ -20,14 +20,18 @@ class Breweries extends Component{
 
 
   render(){
-    debugger
     return(
       <div>
         <h1>Breweries</h1>
         {this.state.breweries.map(brewery=>
-          <BreweryCard
-            brewery={brewery}
-          />
+          <div>
+            <BreweryCard
+              brewery={brewery}
+            />
+            <Map
+              brewery={brewery}
+            />
+          </div>
           )
         }
       </div>
