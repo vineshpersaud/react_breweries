@@ -1,11 +1,14 @@
 import React from 'react';
-import './brewerycard.css'
+import '../stylesheets/brewerycard.css'
+import { Link } from 'react-router-dom';
 
 
 const BreweryCard = ({brewery}) => (
   <div class="BreweryCard" >
+    <Link to={`/brewery/${brewery.id}`}>
     <h3>{brewery.name}</h3>
-    <p><b>Brewery Type -</b> {brewery.brewery_type}</p>
+    </Link>
+    <p><b>Brewery Type</b> - {brewery.brewery_type}</p>
     <h5>Address</h5>
       <p>{brewery.street}</p>
       <p>{brewery.city}, {brewery.postal_code}</p>

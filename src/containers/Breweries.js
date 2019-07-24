@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import BreweryCard from '../components/brewerycard';
-import Map from '../components/map';
 
 class Breweries extends Component{
   constructor(){
@@ -10,25 +9,19 @@ class Breweries extends Component{
     }
   }
 
-
-
   componentDidMount(){
     fetch('https://api.openbrewerydb.org/breweries?by_state=pennsylvania')
           .then(response => response.json())
           .then(x => this.setState({breweries: x}))
   }
 
-
   render(){
     return(
-      <div>
+      <div id="homepage" >
         <h1>Breweries</h1>
         {this.state.breweries.map(brewery=>
-          <div>
+          <div id={brewery.id}>
             <BreweryCard
-              brewery={brewery}
-            />
-            <Map
               brewery={brewery}
             />
           </div>

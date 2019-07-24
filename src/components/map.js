@@ -1,17 +1,17 @@
 import React from 'react';
 import GoogleMapReact from 'google-map-react';
-import './map.css'
-import BeerIcon from './beer.png';
+import '../stylesheets/map.css'
+import BeerIcon from '../images/beer.png';
 
 const Marker = ({ Brewery }) => (
 
-  <div id='marker'><img src={BeerIcon} /></div>
+  <div id='marker'><img alt="map marker" src={BeerIcon} /></div>
 
 )
 
 
 
-const Map = ({brewery}) => (
+const Map = ({latitude,longitude,name}) => (
 
   <div style={{ height: '50vh', width: '80%' }}>
     <GoogleMapReact
@@ -20,9 +20,9 @@ const Map = ({brewery}) => (
       defaultZoom={7}
     >
       <Marker
-        lat={brewery.latitude}
-        lng={brewery.longitude}
-        Brewery={brewery.name}
+        lat={latitude}
+        lng={longitude}
+        Brewery={name}
       />
     </GoogleMapReact>
   </div>
