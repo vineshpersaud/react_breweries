@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 import Map from '../components/map';
-
+import '../stylesheets/breweryshow.css';
 
 class BreweryShow extends Component {
   constructor(){
@@ -36,13 +36,14 @@ class BreweryShow extends Component {
 
    return(
     <div >
+      <div id="details">
       <h3>{this.state.name}</h3>
       <p><b>Brewery Type -</b> {this.state.brewery_type}</p>
       <h5>Address</h5>
       <p>{this.state.street}</p>
       <p>{this.state.city}, {this.state.postal_code}</p>
       <p><a href={this.state.website}>Website</a></p>
-
+    </div>
       <Map
           latitude={this.state.latitude}
           longitude={this.state.longitude}

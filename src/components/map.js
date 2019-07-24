@@ -13,7 +13,7 @@ const Marker = ({ Brewery }) => (
 
 const Map = ({latitude,longitude,name}) => (
 
-  <div style={{ height: '50vh', width: '80%' }}>
+  <div class= "map" style={{ height: '55vh', width: '95%' }}>
     <GoogleMapReact
       bootstrapURLKeys={{ key: 'AIzaSyBtriOkBKss0lD8LIV25l3MRRIJPKS1-bY'}}
       defaultCenter={[41.2033, -77.1945]}

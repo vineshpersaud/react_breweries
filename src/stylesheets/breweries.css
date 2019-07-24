@@ -1,0 +1,12 @@
+.brewery {
+  width: 35%;
+  border-style: solid;
+  border-width: 2px;
+  margin: 15px;
+  float: left;
+  margin-left: 10%;
+}
+
+#header{
+  text-align: center;
+}

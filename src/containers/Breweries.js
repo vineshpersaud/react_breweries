@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import BreweryCard from '../components/brewerycard';
+import '../stylesheets/breweries.css';
 
 class Breweries extends Component{
   constructor(){
@@ -18,9 +19,9 @@ class Breweries extends Component{
   render(){
     return(
       <div id="homepage" >
-        <h1>Breweries</h1>
+        <h1 id="header"> Pennsylvania Breweries</h1>
         {this.state.breweries.map(brewery=>
-          <div id={brewery.id}>
+          <div class="brewery" id={brewery.id}>
             <BreweryCard
               brewery={brewery}
             />
